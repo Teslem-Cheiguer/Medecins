@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats de la Recherche</title>
+</head>
+<body>
+    <h1>Résultats de la Recherche</h1>
+    {% if medecins %}
+        <ul>
+            {% for medecin in medecins %}
+                <li>{{ medecin.nom }} - {{ medecin.specialite }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucun médecin trouvé avec ce nom.</p>
+    {% endif %}
+    <a href="{% url 'search_medecin' %}">Nouvelle recherche</a>
+</body>
+</html>

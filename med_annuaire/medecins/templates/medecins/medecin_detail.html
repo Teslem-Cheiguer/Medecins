@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Détails du Médecin</title>
+</head>
+<body>
+    <h1>Détails du Médecin</h1>
+    <p>Nom : {{ medecin.nom }}</p>
+    <p>Spécialité : {{ medecin.specialite }}</p>
+    <p>Téléphone : {{ medecin.telephone }}</p>
+    <p>Email : {{ medecin.email }}</p>
+    <a href="{% url 'medecin_update' medecin.pk %}">Modifier</a>
+    <a href="{% url 'medecin_list' %}">Retour à la liste</a>
+</body>
+</html>
